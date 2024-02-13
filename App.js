@@ -2,24 +2,41 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-//Nested structure
+// JSX (transpiled before it reached to JS engine) - Parcel - Babel
 
-const parent = React.createElement(
-    "div",
-    {id: "parent"},
-    React.createElement(
-        "div",
-        {id: "child"},
-        [ React.createElement("h1", {}, "I am an H1 tag!"),
-        React.createElement("h2", {}, "I am an H2 tag!") ]
-    )
+// JSX -> Babel transpiles it to React.createElement -> ReactElement - JS Object -> HTMLElement(render)
+const footer = (<h2 className="head" tabIndex="5">Footer Element</h2>);
+
+
+// React Functional Component
+
+const TitleComponent = () => (
+    <h1 className="head" tabIndex="5">
+        Title Component
+    </h1>
 );
 
+// Component Composition
 
-const heading = React.createElement(
-    "h1", 
-    {id: "heading", xyz: "abc"}, 
-    "Hello World from React!"
+const HeadingComponent = () => (
+    <div id="container">
+        <TitleComponent />
+        <h2 className="heading">Heading Component</h2>
+        {footer}
+    </div>
 );
+
+// The above can be also written as below
+// const HeadingComponent = () => {
+//     return <h1>Recat Functional Component</h1>;
+// };
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+// For rendering a React Element
+// root.render(heading);
+
+// For rendering a React Component
+root.render(<HeadingComponent />);
+
