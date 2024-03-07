@@ -119,3 +119,10 @@
 .search {
     padding: 10px;
 }
+
+.filter {
+    margin: 10px;
+    .filter-btn {
+        cursor: pointer;
+    }
+}
