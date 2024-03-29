@@ -1,2 +1,2 @@
-export const LOGO_URL = "https://i.pinimg.com/originals/34/0c/6a/340c6add7519212185a08d4205eb1965.png";
+export const LOGO_URL = "https://i.pinimg.com/originals/b3/8a/a1/b38aa1b21050b0e769a97eb751d12829.png";
 export const RES_LOGO_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
